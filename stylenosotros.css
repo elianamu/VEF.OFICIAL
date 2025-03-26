@@ -1,0 +1,566 @@
+body{
+    box-sizing: border-box;
+    font-family: sans-serif; /* O serif */
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    background-color: #d7d261 !important; /* Fuerza el color amarillo */
+    min-height: 100vh; /* Cubre toda la altura */
+}
+ body header{
+    background-color: #d7d261 ;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    height: 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav ul{
+    list-style: none;
+    display:flex;
+    margin: 0 ;
+    padding: 0;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+nav ul li{
+    margin: 0 15px;
+    position: relative;
+    flex-grow: 1;
+    height: 50px;
+    padding: 0;
+    top: 15px;
+
+}
+@font-face {
+    font-family: "monserrat";
+    src: url("fonts/Montserrat-Light.ttf"); 
+    font-weight: 300;
+    font-style: normal; 
+}
+@font-face {
+    font-family: "monserrat";
+    src: url("fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+    font-style: normal; 
+}
+@font-face {
+    font-family: "monserrat";
+    src: url("fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+    font-style: normal; 
+}
+
+
+header nav ul li a{
+    color: #0c5fb3 ;
+    text-decoration: none;
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-family: "monserrat"; /* Corregido */
+    font-weight: 500;
+}
+nav ul li.logo {
+    position: relative;
+    flex-grow: 0; 
+  }
+  
+nav ul li.logo img {
+    max-height: 50px; 
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.contenedor-usuario {
+    position: relative; /* Contenedor relativo */
+    display: inline-block; /* Para que el ancho se ajuste al contenido */
+}
+
+.bloque-cerrar-sesion {
+    display: none;
+    left: 0;
+    background-color:#0c5fb3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+}
+
+.bloque-cerrar-sesion a {
+    color: black;
+    text-emphasis: center;
+}
+.bloque-cerrar-sesion a:hover{
+    background-color: #d7d261;
+
+}
+.primera-nosotros{
+    margin-top: 80px;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+
+}
+.texto-encima {
+    position: absolute; /* Posiciona el texto absolutamente */
+    top: 45%; /* Centra verticalmente el texto */
+    left: 50%; /* Centra horizontalmente el texto */
+    transform: translate(-50%, -50%); /* Ajusta el centrado */
+    color: white; /* Color del texto (opcional) */
+    font-size: 4em; /* Tamaño del texto (opcional) */
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
+    font-family: "monserrat";
+    font-weight: 700;
+
+}
+
+.segundo-nosotros{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+
+}
+.contenedor-imagenes {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.texto-central {
+    position: absolute;
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Ajusta el ancho para que el texto se ajuste a la forma */
+    text-align: center;
+    font-family: "monserrat";
+    font-weight: 300;
+    font-size: 1.0em; /* Ajusta el tamaño de la fuente */
+    color: black;
+    padding: 20px; /* Añade espaciado interno para que el texto no toque los bordes */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+.texto2-encima{
+    position: absolute;
+    top: 135%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Ajusta el ancho para que el texto se ajuste a la forma */
+    text-align: center;
+    font-family: "monserrat";
+    font-weight: 700;
+    font-size: 3.5em; /* Ajusta el tamaño de la fuente */
+    color: #ffffff;
+}
+.contenedor-iconos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+    position: absolute;
+    top: 175%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.icono-circulo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icono {
+    width: 80px;
+    height: 80px;
+    z-index: 100;
+}
+
+.nube-texto {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 200px;
+    text-align: center;
+    z-index: 101;
+}
+
+.icono-circulo:hover .nube-texto {
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-mision-vision {
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0; /* Corrección aquí */
+}
+
+.cuadro {
+    flex: 1;
+    height: 400px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mision {
+    background-color: #d7d261;
+}
+
+.vision {
+    background-color: #0c5fb3;
+}
+
+.boton-mision {
+    background-color: #0c5fb3;
+    color: #d7d261;
+}
+.boton-vision{
+    background-color: #d7d261;
+    color: #0c5fb3;
+}
+
+.boton-mision, .boton-vision {
+    border-radius: 10px;
+    padding: 30px 60px;
+    border: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dfdac8;
+    padding: 20px;
+    z-index: 1001;
+    border-radius: 10px;
+}
+.contenedor-botones {
+    background-color: transparent !important;
+}
+
+.cuadro-boton {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+
+
+
+
+/*------------------------------------------*/
+
+/* Estilos generales para la sección */
+.equipo {
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: "monserrat";
+    font-weight: 700;
+    color:#007bff;
+}
+
+.titulo-equipo h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    bottom: 20px;
+    top: 10px;
+}
+
+/* Contenedor principal del carrusel */
+.seccion-carrusel {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #d7d261; /* Puedes cambiar este color */
+}
+
+.contenedor-centrado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contenedor del carrusel */
+.carrusel-contenedor {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Contenedor de imágenes */
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 600px; /* Altura fija, ajusta según necesites */
+}
+
+/* Estilos para cada imagen */
+.carrusel-imagen {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+/* Botones de navegación */
+.carrusel-anterior,
+.carrusel-siguiente {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrusel-anterior:hover,
+.carrusel-siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carrusel-anterior {
+    left: 20px;
+}
+
+.carrusel-siguiente {
+    right: 20px;
+}
+
+/* Efecto hover opcional para imágenes */
+.carrusel-imagen:hover {
+    opacity: 0.9;
+}
+
+
+/**-----------------------------------/
+
+/* Estilos generales del footer */
+.cuadro-contacto {
+    background-color: #0056b3; /* Color de fondo */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    border-top: 2px solid #ddd;
+
+}
+
+/* Contenedor del contenido del footer */
+.footer-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Columnas del footer */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+/* Alineación a la derecha para la segunda columna */
+.right-align {
+    text-align: right;
+}
+
+/* Estilos para los títulos */
+.footer-column h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d7d261;
+}
+
+/* Estilos para los párrafos */
+.footer-column p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: white;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 0.7;
+}
+
+/* Formulario de suscripción */
+.email-subscribe {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.email-subscribe input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.email-subscribe button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.email-subscribe button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el pie inferior del footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Logo de la empresa */
+.logo-de-empresa {
+    width: 100px;
+    height: auto;
+}
+
+/* Texto de copyright */
+.copyright h1 {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-align {
+        text-align: center;
+    }
+
+    .email-subscribe {
+        flex-direction: column;
+    }
+
+    .email-subscribe button {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom .logo-de-empresa {
+        margin-bottom: 10px;
+    }
+}

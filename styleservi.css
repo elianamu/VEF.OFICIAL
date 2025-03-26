@@ -1,0 +1,409 @@
+body{
+    box-sizing: border-box;
+    font-family: sans-serif; /* O serif */
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    background-color: #0c5fb3;
+    min-height: 100vh; /* Cubre toda la altura */
+}
+ body header{
+    background-color: white ;
+    padding: 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+    height: 80px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav ul{
+    list-style: none;
+    display:flex;
+    margin: 0 ;
+    padding: 0;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+nav ul li{
+    margin: 0 15px;
+    position: relative;
+    flex-grow: 1;
+    height: 50px;
+    padding: 0;
+    top: 15px;
+
+}
+@font-face {
+    font-family: "monserrat";
+    src: url("fonts/Montserrat-Light.ttf"); 
+    font-weight: 300;
+    font-style: normal; 
+}
+@font-face {
+    font-family: "monserrat";
+    src: url("fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+    font-style: normal; 
+}
+@font-face {
+    font-family: "monserrat";
+    src: url("fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+    font-style: normal; 
+}
+
+
+header nav ul li a{
+    color: #0c5fb3 ;
+    text-decoration: none;
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-family: "monserrat"; /* Corregido */
+    font-weight: 500;
+}
+nav ul li.logo {
+    position: relative;
+    flex-grow: 0; 
+  }
+  
+nav ul li.logo img {
+    max-height: 50px; 
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.contenedor-usuario {
+    position: relative; /* Contenedor relativo */
+    display: inline-block; /* Para que el ancho se ajuste al contenido */
+}
+
+.bloque-cerrar-sesion {
+    display: none;
+    left: 0;
+    background-color:#0c5fb3;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+}
+
+.bloque-cerrar-sesion a {
+    color: black;
+    text-emphasis: center;
+}
+.bloque-cerrar-sesion a:hover{
+    background-color: #d7d261;
+
+}
+.primer-texto {
+    /* position: absolute; Elimina esta línea */
+    top: auto; /* Elimina o cambia a auto */
+    left: 50%;
+    transform: translateX(-50%); /* Solo centrar horizontalmente */
+    color: white;
+    font-size: 4em;
+    z-index: 1;
+    font-family: "monserrat";
+    font-weight: 700;
+    margin-top: 100px; /* Agrega un margen superior para separarlo del header */
+    margin-bottom: 20px; /* Agrega un margen inferior para separarlo del siguiente elemento */
+    position: relative; /* Para que z-index funcione dentro del flujo normal */
+}
+
+.segundo-texto {
+    /* position: absolute; Elimina esta línea */
+    top: auto; /* Elimina o cambia a auto */
+    left: 50%;
+    transform: translateX(-50%); /* Solo centrar horizontalmente */
+    color: white;
+    font-size: 1em;
+    z-index: 1;
+    font-family: "monserrat";
+    font-weight: 500;
+    max-width: 800px; /* Limita el ancho del párrafo para mejor lectura */
+    text-align: center; /* Centra el texto dentro de su contenedor */
+    margin-bottom: 20px; /* Agrega un margen inferior para separarlo del video */
+    position: relative; /* Para que z-index funcione dentro del flujo normal */
+}
+
+/* Asegúrate de que la sección .servicios o su padre no tengan estilos que interfieran con el flujo */
+.servicios {
+    padding-top: 100px; /* Ajusta el padding superior para dar espacio al título */
+    text-align: center; /* Centra el título */
+}
+
+.parrafo {
+    text-align: center; /* Centra el párrafo */
+    padding: 20px; /* Agrega un poco de padding alrededor del párrafo */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: black;
+}
+
+/* Estilos para las imágenes seleccionables */
+.contenedor-imagenes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.contenedor-imagenes img {
+    max-width: 100%; /* Imágenes más pequeñas */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: sombra suave */
+}
+
+.imagen-seleccionable {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.imagen-seleccionable:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para los formularios */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input, .formulario textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formulario button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos generales del footer */
+.cuadro-contacto {
+    background-color: #0056b3; /* Color de fondo */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    border-top: 2px solid #ddd;
+
+}
+
+
+/* Contenedor del contenido del footer */
+.footer-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Columnas del footer */
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+/* Alineación a la derecha para la segunda columna */
+.right-align {
+    text-align: right;
+}
+
+/* Estilos para los títulos */
+.footer-column h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d7d261;
+}
+
+/* Estilos para los párrafos */
+.footer-column p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: white;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons img:hover {
+    opacity: 0.7;
+}
+
+/* Formulario de suscripción */
+.email-subscribe {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.email-subscribe input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.email-subscribe button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.email-subscribe button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el pie inferior del footer */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Logo de la empresa */
+.logo-de-empresa {
+    width: 100px;
+    height: auto;
+}
+
+/* Texto de copyright */
+.copyright h1 {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-align {
+        text-align: center;
+    }
+
+    .email-subscribe {
+        flex-direction: column;
+    }
+
+    .email-subscribe button {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom .logo-de-empresa {
+        margin-bottom: 10px;
+    }
+}

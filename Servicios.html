@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styleservi.css" rel="stylesheet">
+    <link rel="icon" href="logo-de-empresa.png" type="image/png">
+    <link rel="shortcut icon" href="logo-de-empresa.png" type="image/png">
+    <title>Servicios</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li class="logo"><a href="index.html"><img src="logo-de-empresa.png" alt="Logo de mi empresa"></a></li>
+                <li><a href="#contacto-final">Contacto</a></li>
+                <li id="inicio-sesion-menu"><a href="#" id="inicio-sesion-enlace">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="modal-inicio-sesion" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">×</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="formulario-inicio-sesion">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    <div id="bloque-cerrar-sesion" class="bloque-cerrar-sesion">
+        <a href="#" id="cerrar-sesion">Cerrar Sesión</a>
+    </div>
+    <section class="servicios">
+        <H1 class="primer-texto">SERVICIOS</H1>
+    </section>
+    <section class="parrafo">
+        <p class="segundo-texto">En nuestro servicio, conectamos a estudiantes de diseño gráfico a punto de finalizar sus estudios con colegios que necesitan renovar su identidad visual. Facilitamos prácticas profesionales donde los estudiantes tienen la oportunidad de aplicar sus conocimientos y habilidades en proyectos reales, mientras que las instituciones educativas mejoran su imagen y comunicación. Este proceso no solo ayuda a los colegios a fortalecer su presencia en medios y redes sociales, sino que también brinda a los estudiantes una valiosa experiencia que los prepara para su futuro profesional.</p>
+    </section>
+
+    <video controls width="640" height="360" style="display: block; margin: 20px auto;">
+        <source src="primer-vi.mp4" type="video/mp4">
+    </video>
+
+
+    <div class="contenedor-imagenes">
+        <div class="imagen-seleccionable" data-tipo="institucion"> 
+            <img src="colegios.jpg" alt="Imagen Instituciones">
+        </div>
+        <div class="imagen-seleccionable" data-tipo="practicante">
+            <img src="practicantes.jpg" alt="Imagen Practicantes">
+        </div>
+    </div>
+    
+    <!-- Modales -->
+    <div id="modal-institucion" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="formulario" id="formulario-institucion">
+                <h2>Formulario para Instituciones</h2>
+                <label for="nombre-institucion">Nombre de la Institución:</label>
+                <input type="text" id="nombre-institucion" name="nombre-institucion">
+    
+                <label for="email-institucion">Email de Contacto:</label>
+                <input type="email" id="email-institucion" name="email-institucion">
+    
+                <label for="descripcion-necesidad">Descripción de la Necesidad:</label>
+                <textarea id="descripcion-necesidad" name="descripcion-necesidad"></textarea>
+    
+                <button type="submit">Enviar Solicitud</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-practicante" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <div class="formulario" id="formulario-practicante">
+                <h2>Formulario para Practicantes</h2>
+                <label for="nombre-practicante">Nombre Completo:</label>
+                <input type="text" id="nombre-practicante" name="nombre-practicante">
+    
+                <label for="email-practicante">Email:</label>
+                <input type="email" id="email-practicante" name="email-practicante">
+    
+                <label for="portafolio">Enlace a tu Portafolio:</label>
+                <input type="text" id="portafolio" name="portafolio">
+    
+                <button type="submit">Enviar Interés</button>
+            </div>
+        </div>
+    </div>
+    <section id="contacto-final">
+        <footer class="cuadro-contacto">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h1>Contáctanos</h1>
+                </div>
+                <div class="footer-column right-align">
+                    <p>Mantente informado</p>
+                    <div class="social-icons">
+                        <a href="https://x.com/Veff_official?t=-V1MRs1MQW3dMoHLISPXgQ&s=09" target="_blank" aria-label="Twitter">
+                            <img src="twitter.png" alt="Twitter">
+                        </a>
+                        <a href="https://www.facebook.com/share/1PqaPEEy59/" target="_blank" aria-label="Facebook">
+                            <img src="facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://pin.it/6SDcEqmpw" target="_blank" aria-label="Pinterest">
+                            <img src="pinterest.png" alt="Pinterest">
+                        </a>
+                        <a href="https://www.instagram.com/veff.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+                            <img src="instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.tiktok.com/@veff_oficial?_t=ZS-8uxrS303E7Z&_r=1" target="_blank" aria-label="TikTok">
+                            <img src="tiktok.png" alt="TikTok">
+                        </a>
+                        <a href="https://www.linkedin.com/in/veff-oficial-800a8a357/" target="_blank" aria-label="LinkedIn">
+                            <img src="linkedin.png" alt="LinkedIn">
+                    </div>
+                    <div class="email-subscribe">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Email Address">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                    <p class="copyright">Suscríbete y mantente informado</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>
+                    <img src="logo-de-empresa.png" alt="Logo de la empresa" class="logo-de-empresa">
+                </div>
+                <div class="copyright">
+                    <h1>Copyright © 2025 VEF</h1>
+                </div>
+            </div>
+        </footer>
+          </section>
+    
+    <script src="formulari.js"></script>
+</body>
+</html>

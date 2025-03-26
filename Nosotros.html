@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylenosotros.css" rel="stylesheet">
+    <link rel="icon" href="logo-de-empresa.png" type="image/png">
+    <link rel="shortcut icon" href="logo-de-empresa.png" type="image/png"> 
+    <title>Nosotros</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li class="logo"><a href="index.html"><img src="logo-de-empresa.png" alt="Logo de mi empresa"></a></li>
+                <li><a href="#contacto-final">Contacto</a></li>
+                <li id="inicio-sesion-menu"><a href="#" id="inicio-sesion-enlace">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="modal-inicio-sesion" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="formulario-inicio-sesion">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    <div id="bloque-cerrar-sesion" class="bloque-cerrar-sesion">
+        <a href="#" id="cerrar-sesion">Cerrar Sesión</a>
+    </div>
+    <div class="text-primero">
+        <img src="imagen-nosotros.png" class="primera-nosotros">
+        <h1 class="texto-encima">NOSOTROS</h1>
+    </div>
+    <div class="texto-central">
+        <p>"Nuestra iniciativa surge como respuesta a la necesidad de modernizar
+            la identidad visual de los colegios en Colombia, garantizando una
+            comunicación más efectiva y coherente con su comunidad. Conectamos a
+            estudiantes de diseño gráfico con instituciones educativas,
+            brindándoles la oportunidad de desarrollar soluciones innovadoras
+            mientras adquieren experiencia real. Además, promovemos el uso
+            responsable de la tecnología, fomentando espacios que equilibren la
+            innovación con el desarrollo creativo y crítico de los estudiantes.
+            Creemos en el poder del diseño y la educación para transformar el futuro."</p>
+    </div>
+    <div>
+        <img src="imagen-nosotros2.png" class="segundo-nosotros">
+        <h2 class="texto2-encima">Nuestros Valores</h2>
+    </div>
+    <div class="contenedor-iconos">
+        <div class="icono-circulo" data-texto="Innovación"
+            data-segundo-texto="Texto de la segunda nube para Innovación.">
+            <img src="innovación.png" alt="Icono 1" class="icono">
+            <div class="nube-texto"></div>
+        </div>
+        <div class="icono-circulo" data-texto="Responsabilidad"
+            data-segundo-texto="Texto de la segunda nube para Responsabilidad.">
+            <img src="responsabilidad.png" alt="Icono 2" class="icono">
+            <div class="nube-texto"></div>
+        </div>
+        <div class="icono-circulo" data-texto="Colaboracion" data-segundo-texto="somos un equipo que ">
+            <img src="colaboracion.png" alt="Icono 3" class="icono">
+            <div class="nube-texto"></div>
+        </div>
+
+    </div>
+    <div class="contenedor-principal">
+        <div class="contenedor-mision-vision">
+            <div class="cuadro mision">
+                <button class="boton-mision">Misión</button>
+            </div>
+            <div class="cuadro vision">
+                <button class="boton-vision">Visión</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ventana-emergente-mision" class="ventana-emergente">
+        <div class="contenido-emergente">
+            <h1>Misión 🎯</h1>
+            <p>Conectar a estudiantes de diseño gráfico con colegios que necesitan mejorar su identidad visual,
+                brindando soluciones innovadoras y funcionales. A través de esta colaboración, buscamos fortalecer la
+                comunicación de las instituciones educativas mientras fomentamos el aprendizaje práctico y el uso
+                responsable de la tecnología en el ámbito escolar.</p>
+            <button class="cerrar-emergente">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="ventana-emergente-vision" class="ventana-emergente">
+        <div class="contenido-emergente">
+            <h1>Visión 🌎</h1>
+            <p>Ser la plataforma líder en Colombia que transforma la identidad visual de los colegios a través del
+                talento emergente del diseño gráfico. Aspiramos a generar un impacto positivo en la educación,
+                promoviendo la creatividad, la modernización digital y el equilibrio entre tecnología y desarrollo
+                integral en las instituciones educativas.</p>
+            <button class="cerrar-emergente">Cerrar</button>
+        </div>
+
+
+        </div>
+    </div>
+      <!-------------------------------------->
+
+        <!-- Sección del equipo -->
+        <section class="equipo">
+            <div class="titulo-equipo">
+                <h1>EQUIPO</h1>
+            </div>
+        <!-- CARRUSEL -->
+            <section class="seccion-carrusel">
+                <div class="contenedor-centrado">
+                    <div class="carrusel-contenedor">
+                        <div class="carrusel-imagenes">
+                            <img src="fiorella.jpg" alt="Fiorella" class="carrusel-imagen">
+                            <img src="foto-Eliana.jpg" alt="Eliana" class="carrusel-imagen">
+                            <img src="foto-valery.jpg" alt="Valery" class="carrusel-imagen">
+                        </div>
+                        <button class="carrusel-anterior" aria-label="Anterior">&#10094;</button>
+                        <button class="carrusel-siguiente" aria-label="Siguiente">&#10095;</button>
+                    </div>
+                </div>
+            </section>
+    </section>
+
+      <!--------------------------------------> 
+      <section id="contacto-final">
+    <footer class="cuadro-contacto">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h1>Contáctanos</h1>
+            </div>
+            <div class="footer-column right-align">
+                <p>Mantente informado</p>
+                <div class="social-icons">
+                    <a href="https://x.com/Veff_official?t=-V1MRs1MQW3dMoHLISPXgQ&s=09" target="_blank" aria-label="Twitter">
+                        <img src="twitter.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.facebook.com/share/1PqaPEEy59/" target="_blank" aria-label="Facebook">
+                        <img src="facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://pin.it/6SDcEqmpw" target="_blank" aria-label="Pinterest">
+                        <img src="pinterest.png" alt="Pinterest">
+                    </a>
+                    <a href="https://www.instagram.com/veff.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@veff_oficial?_t=ZS-8uxrS303E7Z&_r=1" target="_blank" aria-label="TikTok">
+                        <img src="tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://www.linkedin.com/in/veff-oficial-800a8a357/" target="_blank" aria-label="LinkedIn">
+                        <img src="linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="email-subscribe">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Email Address">
+                    <button>SUBSCRIBE</button>
+                </div>
+                <p class="copyright">Suscríbete y mantente informado</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <img src="logo-de-empresa.png" alt="Logo de la empresa" class="logo-de-empresa">
+            </div>
+            <div class="copyright">
+                <h1>Copyright © 2025 VEF</h1>
+            </div>
+        </div>
+    </footer>
+    
+
+  
+    <script src="carrusel.js"></script>
+    <script src="scriptno.js"></script>
+</body>
+
+</html>
